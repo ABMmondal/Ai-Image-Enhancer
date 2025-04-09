@@ -16,8 +16,9 @@ const Home = () => {
 
 
         try {
-
             const enhancedURL=await enhancedImageAPI(file)
+
+
             setEnhancedImage(enhancedURL)
             setLoading(false)
              
@@ -33,7 +34,7 @@ const Home = () => {
     return (
         <>
             <ImageUpload  UploadImageHandler={UploadImageHandler}/>
-            <ImagePreview loading={loading} uploadImage={uploadImage} enhance={enhancedImage} />
+            <ImagePreview loading={loading} uploadImage={uploadImage} enhance={enhancedImage?.image} />
 
         </>
     )
